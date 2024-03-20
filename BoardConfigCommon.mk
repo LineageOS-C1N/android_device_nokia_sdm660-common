@@ -73,6 +73,7 @@ BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=1 androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci
+BOARD_KERNEL_CMDLINE += androidboot.super_partition=system
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
@@ -93,6 +94,7 @@ TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
 # Partitions
 BOARD_USES_SYSTEM_OTHER_ODEX := true
 BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_PRODUCT := system/product
 TARGET_COPY_OUT_VENDOR := vendor
